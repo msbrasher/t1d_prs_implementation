@@ -2,6 +2,8 @@
 ### Overview
 This is an R-based tool that utilizes the [LDlink API](https://ldlink.nih.gov/?tab=home) to pull LD information for selecting proxy SNPs for variants in polygenic score calculation. 
 
+---
+
 ### Dependencies
 >[!NOTE]
 > Note that these versions may be flexible, but these are the versions that the tool was developed for use with
@@ -14,6 +16,8 @@ This script is set up to be run using R (version 4.2.2). Required packages inclu
 * liftOver (v1.22.0)
 * stringr (v1.5.0)
 * tidyverse (2.0.0)
+
+---
 
 ### Input files & format
 
@@ -33,16 +37,14 @@ This script is set up to be run using R (version 4.2.2). Required packages inclu
     *          effect_weight = numeric effect allele weight
 
     For example:
-    <img width="1048" height="70" alt="Screenshot 2025-07-22 at 11 13 08 AM" src="https://github.com/user-attachments/assets/07809ac4-055e-4a27-a78e-d2c82fde90b3" />
-
+    <img width="1048" height="55" alt="Screenshot 2025-07-22 at 3 42 53 PM" src="https://github.com/user-attachments/assets/509b8154-4fad-490f-a3c2-70af4f076786" />
 
 2. File containing variants available in dataset
     This should be a list of available SNPs in your dataset that would make appropriate proxies (SNPs that pass some standard QC filters). The file should have ids in the format chr:pos:ref:alt (ex. 10:100004376:T:C) in one column named "ID".
     
     For example:
    
-    <img width="157" height="93" alt="Screenshot 2025-07-22 at 11 22 44 AM" src="https://github.com/user-attachments/assets/596b1aeb-762f-4b9f-a9ce-d8c60162bc35" />
-
+    <img width="145" height="93" alt="Screenshot 2025-07-22 at 3 41 15 PM" src="https://github.com/user-attachments/assets/337bc5fc-99aa-473b-828f-6d3f3bce64dd" />
 
 4. Chain file "hg19ToHg38.over.chain" for liftover of potential proxies from GRCh37 to GRCh38
     This file can be obtained from [LiftOver](https://hgdownload.cse.ucsc.edu/goldenpath/hg19/liftOver/). 
@@ -52,8 +54,7 @@ This script is set up to be run using R (version 4.2.2). Required packages inclu
     
     For example:
    
-    <img width="629" height="73" alt="Screenshot 2025-07-22 at 11 48 47 AM" src="https://github.com/user-attachments/assets/84dce7d1-ff80-4801-a79d-ae8e20396444" />
-
+   <img width="636" height="93" alt="Screenshot 2025-07-22 at 3 41 55 PM" src="https://github.com/user-attachments/assets/4952abad-af34-4caa-afdb-7f611a618074" />
 
     
 ###### Other variables
@@ -69,6 +70,8 @@ This script is set up to be run using R (version 4.2.2). Required packages inclu
 3. Output file prefix name
     This should be a string specifying the prefix that should be named when naming output files.
 
+---
+
 ### Outputs
 1. **<output_prefix>_present_snps.txt** = information about SNPs from the input PRS that do not require proxies.
     
@@ -78,16 +81,22 @@ This script is set up to be run using R (version 4.2.2). Required packages inclu
 
 4. **<output_prefix>_newproxy_input.txt** = this is the final new PRS weight file to be used for score calculation. It is also pre-formatted for input into [ESCALATOR](https://github.com/menglin44/ESCALATOR) which can be used for calculating PRS in the target dataset.
 
+---
+
 ### Example
 ```
-Rscript prs_catalog_proxy_search.R onengut_aa7_b38.txt.gz variants_list.txt hg19ToHg38.over.chain f3_freq_chr $LDLINK_TOKEN ALL aa7_proxy_testcleaned
+Rscript prs_catalog_proxy_search.R demo_score.txt variants_list.txt hg19ToHg38.over.chain f3_freq_chr $LDLINK_TOKEN ALL demo_proxy
 ```
-    
+
+---
+
 ### Additional Considerations
   
 ###### Score Size and Run Time
 The run time of this tool is bottlenecked at the query to the LDlink API. For this reason, the expected run time might be exceptionally long when running on large scores with many variants.
-    
+
+---
+
 ### Citation
     
 To cite this work please cite our recent publication: 
