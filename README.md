@@ -85,7 +85,7 @@ This script is set up to be run using R (version 4.2.2). Required packages inclu
 
 ### Example
 ```
-Rscript prs_catalog_proxy_search.R demo_score.txt variants_list.txt hg19ToHg38.over.chain f3_freq_chr $LDLINK_TOKEN ALL demo_proxy
+Rscript prs_catalog_proxy_search.R demo_score.txt variants_list.txt hg19ToHg38.over.chain demo_freq_chr $LDLINK_TOKEN ALL demo_proxy
 ```
 
 ---
