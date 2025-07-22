@@ -1,9 +1,3 @@
----
-title: README - PRS Proxy Search
-tags: [t1d prs]
-
----
-
 # PRS Proxy SNP Search
 ### Overview
 This is an R-based tool that utilizes the [LDlink API](https://ldlink.nih.gov/?tab=home) to pull LD information for selecting proxy SNPs for variants in polygenic score calculation. 
