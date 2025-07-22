@@ -1,3 +1,0 @@
-rsID	chr_name	chr_position	effect_allele	effect_weight	allelefrequency_effect	OR	hm_source	hm_rsID	hm_chr	hm_pos	hm_inferOtherAllele
-rs9271594	6	32591213	G	1.801	0.095	6.06	ENSEMBL	rs9271594	6	32623436	A
-rs9273363	6	32626272	A	1.702	0.131	5.48	ENSEMBL	rs9273363	6	32658495	C
