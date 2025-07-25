@@ -28,6 +28,7 @@ To cite this work please cite our recent publication:
 Brasher, M. S. et al. Enabling reproducible type 1 diabetes polygenic risk scoring for clinical and translational applications. Preprint at https://doi.org/10.1101/2025.07.15.25331523 (2025).
 
 As well as the original work proposing this method:
+
 Khera, A. V. et al. Whole-Genome Sequencing to Characterize Monogenic and Polygenic Contributions in Patients Hospitalized With Early-Onset Myocardial Infarction. Circulation 139, 1593–1602 (2019).
 
 Khan, A. et al. Genome-wide polygenic score to predict chronic kidney disease across ancestries. Nat. Med. 28, 1412–1420 (2022).
