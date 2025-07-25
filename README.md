@@ -1,14 +1,10 @@
----
-title: Type 1 Diabetes PRS Implementation Resources
-tags: [t1d prs]
-
----
-
 # Type 1 Diabetes PRS Implementation Resources
 
 This repository contains resources to address common challenges of polygenic score calculation, including selecting proxy variants in the case of SNPs not being present in the target dataset and accounting for ancestry differences in PRS.
 
 See subdirectory READMEs for specifics on how to use each tool. 
+
+---
 
 ### Citation
 
