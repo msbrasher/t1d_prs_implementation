@@ -1,16 +1,23 @@
 # PRS Ancestry Calibration
 ### Overview
-This is an R-function to regress the effects of genetic principal components out of the mean and variance of calculated polygenic risk scores.
+This is an R-function to regress the effects of genetic principal components out of the mean and variance of calculated polygenic risk scores, based on methods from the eMERGE network.
+
+---
 
 ### Input & Output
 **Input**
+
 The function requires a data frame in R with at least a numeric column of PRS values and any number of columns of numeric genetic principal component values. The data frame can contain other columns, and columns can be in any order.
 
 **Output**
+
 The function will output a data frame that is the same as the input data frame, but with two additional columns appended. 
 
 *calib1* = contains the PRS values with PCs regressed out of the mean
+
 *calib2* = contains the PRS values with PCs regressed out of both the mean and variance
+
+---
 
 ### Example
 ```
@@ -20,6 +27,8 @@ data <- read.table("input_file.txt", header = T)
 
 data_calib <- ancestry_calib(data, pc_prefix = "pc", num_pcs = 10, score_col = "SCORE")
 ```
+
+---
 
 ### Citation
 
