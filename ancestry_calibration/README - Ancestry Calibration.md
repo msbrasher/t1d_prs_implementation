@@ -9,6 +9,10 @@ This is an R-function to regress the effects of genetic principal components out
 
 The function requires a data frame in R with at least a numeric column of PRS values and any number of columns of numeric genetic principal component values. The data frame can contain other columns, and columns can be in any order.
 
+For example:
+
+<img width="378" height="71" alt="Screenshot 2025-07-28 at 11 58 34 AM" src="https://github.com/user-attachments/assets/5523966e-24d2-4509-aa48-d58e50865df1" />
+
 **Output**
 
 The function will output a data frame that is the same as the input data frame, but with two additional columns appended. 
@@ -16,6 +20,8 @@ The function will output a data frame that is the same as the input data frame, 
 *calib1* = contains the PRS values with PCs regressed out of the mean
 
 *calib2* = contains the PRS values with PCs regressed out of both the mean and variance
+
+
 
 ---
 
